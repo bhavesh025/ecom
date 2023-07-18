@@ -1,0 +1,9 @@
+#mynavbar
+{
+    justify-content: space-between;    
+    float: right;
+    
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: WHITE;
+}

@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Bhavesh Bhoj",
+      "email": "bhavesh@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Jigar Zala",
+      "email": "jigar@gmail.com",
+      "password": "654321"
+    },
+    {
+      "id": 3,
+      "user": "Raish K",
+      "email": "raish@gmail.com",
+      "password": "147852"
+    },
+    {
+      "name": "MAHARSHI PANDYA",
+      "email": "ABC@GMAIL.COM",
+      "pass": "123456",
+      "id": 4
+    }
+  ]
+}
