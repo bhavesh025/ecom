@@ -13,16 +13,10 @@
       "password": "654321"
     },
     {
-      "id": 3,
-      "user": "Raish K",
-      "email": "raish@gmail.com",
-      "password": "147852"
-    },
-    {
-      "name": "MAHARSHI PANDYA",
-      "email": "ABC@GMAIL.COM",
-      "pass": "123456",
-      "id": 4
+      "name": "Mp",
+      "email": "Mp@gmail.com",
+      "password": "567890",
+      "id": 3
     }
   ]
 }
