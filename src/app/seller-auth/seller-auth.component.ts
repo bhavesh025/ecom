@@ -34,7 +34,8 @@ public sellerLogin!:NgForm;
               alert('Login Successful');
                 this.userdata = user;
                 this.router.navigate(['seller-home']);  
-                localStorage.setItem('user',JSON.stringify(this.userdata));              
+                localStorage.setItem('user',JSON.stringify(this.userdata));                 
+                
             } else{
                 alert("user not found");                         
               } 

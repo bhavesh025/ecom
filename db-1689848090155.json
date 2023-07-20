@@ -26,17 +26,8 @@
       "productColor": "White",
       "productCategory": "Mobile",
       "productDescription": "The iPhone 14  Apple's current flagship iPhones.",
-      "productImage": "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-iPhone-14-Plus-2up-purple-220907-geo_inline.jpg.large.jpg",
+      "productImage": "https://www.google.com/search?tbm=isch&q=iphkne%2014&tbs=imgo:1#imgrc=3QTiP6ynoV4zwM",
       "id": 1
-    },
-    {
-      "productName": "Samsung Galaxy A34 5G",
-      "productPrice": "30000",
-      "productColor": "Black",
-      "productCategory": "Mobile",
-      "productDescription": "Nightography, Gorilla Glass 5, IP67, Voice Focus. Samsung Knox security. Full HD Display",
-      "productImage": "https://i.gadgets360cdn.com/products/large/samsung-galaxy-a34-5g-621x800-1681716231.jpg",
-      "id": 2
     }
   ]
 }

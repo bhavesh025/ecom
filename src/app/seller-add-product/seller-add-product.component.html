@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="alert alert-primary text-center" role="alert">
+                <strong style="font-size: larger;">Product Details</strong>
+            </div>
+            <form #addproductForm="ngForm" (ngSubmit)="AddProduct(addproductForm.value);addproductForm.reset();">
+                <div class="row mb-3">
+                  <label for="p1" class="col-sm-3 col-form-label">Product Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="p1" name="productName" ngModel>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="p2" class="col-sm-3 col-form-label">Price</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="p2" name="productPrice" ngModel>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="p3" class="col-sm-3 col-form-label">Color</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="p3" name="productColor" ngModel>
+                    </div>
+                  </div>
+              
+                <div class="row mb-3">
+                    <label for="p5" class="col-sm-3 col-form-label">Category</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="p5" name="productCategory" ngModel>
+                        </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="p6" class="col-sm-3 col-form-label">Description</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="p6" name="productDescription" ngModel></textarea>                            
+                        </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="p7" class="col-sm-3 col-form-label">Image</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="p7" name="productImage" ngModel>
+                        </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Product</button>
+              </form>
+
+        </div>
+        <div class="col-sm-6"></div>
+    </div>
+</div>
