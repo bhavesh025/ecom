@@ -37,6 +37,15 @@
       "productDescription": "Nightography, Gorilla Glass 5, IP67, Voice Focus. Samsung Knox security. Full HD Display",
       "productImage": "https://i.gadgets360cdn.com/products/large/samsung-galaxy-a34-5g-621x800-1681716231.jpg",
       "id": 2
+    },
+    {
+      "productName": "Bluetooth Wireless 4.1 Speaker",
+      "productPrice": "950",
+      "productColor": "Green",
+      "productCategory": "Speaker",
+      "productDescription": "JMALL Bluetooth Wireless 4.1 Speaker System One of the best product.",
+      "productImage": "https://n4.sdlcdn.com/imgs/k/n/0/JMALL-Bluetooth-Wireless-4-1-SDL911478239-4-03cd8.JPG",
+      "id": 3
     }
   ]
 }

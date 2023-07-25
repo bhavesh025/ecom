@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 import { SellerProductListComponent } from './seller-product-list/seller-product-list.component';
 import { SellerProductEditComponent } from './seller-product-edit/seller-product-edit.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SellerProductEditComponent } from './seller-product-edit/seller-product
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule    
+    FormsModule,
+    NgbModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,10 @@
 export interface product{
     id:number,
-    productname:string,
-    price :string,
-    color:string,
-    category:string,
-    description:string,
-    image:string
+    productName:string,
+    productPrice :string,
+    productColor:string,
+    productCategory:string,
+    productDescription:string,
+    productImage:string
 
 }

@@ -28,4 +28,8 @@ export class SellerService {
       return this.http.get("http://localhost:3000/product");
   }
 
+  popularProduct(){
+    return this.http.get<product[]>("http://localhost:3000/product?_limit=2");
+  }
+
 }
