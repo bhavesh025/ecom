@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SellerService } from '../services/seller.service';
 import { product } from '../datatype';
+import { ProductService } from '../services/product.service';
 
 
 @Component({
@@ -14,7 +15,8 @@ export class HomeComponent {
   images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
     popProduct: any;
-    constructor(private ApiSer:SellerService){   }
+    trndayData:undefined | product[];
+    constructor(private ApiSer:SellerService, private proSer:ProductService){   }
 
    ngOnInit(){
     this.ApiSer.popularProduct().subscribe((data)=>{      
@@ -22,6 +24,10 @@ export class HomeComponent {
       this.popularProducts = data;
       //this.popProduct = data;
     })
+    this.proSer.trndyProduct().subscribe((res)=>{
+        console.warn("Trandy Product",res)
+        this.trndayData = res;
+    });
    }
 
 
