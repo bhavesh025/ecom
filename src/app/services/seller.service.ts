@@ -17,8 +17,7 @@ export class SellerService {
   }
 
   signInUser(data:any){
-    return this.http.get<any>("http://localhost:3000/user"); 
-    //http://localhost:3000/user?email=jigar@gmail.com&password=654321
+    return this.http.get<any>("http://localhost:3000/user");     
   }
 
   AddProductApi(data:product){
@@ -29,7 +28,7 @@ export class SellerService {
   }
 
   popularProduct(){
-    return this.http.get<product[]>("http://localhost:3000/product?_limit=2");
+    return this.http.get<product[]>("http://localhost:3000/product?_limit=3");
   }
 
 }

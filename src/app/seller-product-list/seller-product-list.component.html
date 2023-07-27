@@ -31,8 +31,8 @@
                 <td>{{data.productDescription}}</td>  
                 <td [width]="200">
                     <button class="btn btn-danger" (click)="delProduct()">Delete</button>
-                    <a routerLink="seller-product-edit">
-                        <button class="btn-success" style="margin-left: 10px;">Edit</button>
+                    <a routerLink="/seller-product-edit/{{data.id}}">
+                        <button class="btn btn-warning" style="margin-left: 10px;">Edit</button>
                     </a>
                 </td>
 

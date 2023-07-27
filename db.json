@@ -22,8 +22,8 @@
   "product": [
     {
       "productName": "iPhone 14",
-      "productPrice": "45000",
-      "productColor": "White",
+      "productPrice": "75000",
+      "productColor": "Black",
       "productCategory": "Mobile",
       "productDescription": "The iPhone 14  Apple's current flagship iPhones.",
       "productImage": "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-iPhone-14-Plus-2up-purple-220907-geo_inline.jpg.large.jpg",
@@ -46,6 +46,51 @@
       "productDescription": "JMALL Bluetooth Wireless 4.1 Speaker System One of the best product.",
       "productImage": "https://n4.sdlcdn.com/imgs/k/n/0/JMALL-Bluetooth-Wireless-4-1-SDL911478239-4-03cd8.JPG",
       "id": 3
+    },
+    {
+      "productName": "ASUS Vivobook 15",
+      "productPrice": "45000",
+      "productColor": "Black",
+      "productCategory": "Watch",
+      "productDescription": "ASUS Vivobook 15 Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ522WS.",
+      "productImage": "https://rukminim2.flixcart.com/image/832/832/xif0q/watch/h/g/u/-original-imagqhveckhjygya.jpeg?q=70",
+      "id": 4
+    },
+    {
+      "productName": "Realme C55 (Sunshower, 128 GB)  (8 GB RAM)",
+      "productPrice": "14000",
+      "productColor": "Glue",
+      "productCategory": "Mobile",
+      "productDescription": "Handset, Adapter, USB Cable, Important Info Booklet with Warranty Card, Quick Guide, Sim Card Tool, Screen Protect Film, Case",
+      "productImage": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/i/q/-original-imagp55ffvqaj9ws.jpeg",
+      "id": 5
+    },
+    {
+      "productName": "Delta-20 Slateblue Sports - Indian Shoes",
+      "productPrice": "800",
+      "productColor": "Navy",
+      "productCategory": "Shoes",
+      "productDescription": "Delta-20 Slateblue Sports,Casual,Walking,Gym, Walking Shoes For Men  (Blue)",
+      "productImage": "https://rukminim2.flixcart.com/image/416/416/xif0q/shoe/z/m/9/-original-imagpb4zy25a9hsg.jpeg",
+      "id": 6
+    },
+    {
+      "productName": "Laptop Backpack Medium 30 L Laptop ",
+      "productPrice": "500",
+      "productColor": "Blue",
+      "productCategory": "Bag",
+      "productDescription": "Medium 30 L Laptop Backpack Medium 30 L Laptop Backpack Waterproof Laptop Backpack/School Bag/College Bag  (Blue)",
+      "productImage": "https://rukminim2.flixcart.com/image/832/832/xif0q/backpack/y/q/d/-original-imagh3w8jyhynyyr.jpeg",
+      "id": 7
+    },
+    {
+      "productName": "HP Chromebook MediaTek Kompanio 500",
+      "productPrice": "22500",
+      "productColor": "Grey",
+      "productCategory": "Laptop",
+      "productDescription": "4 GB/64 GB EMMC Storage/Chrome OS) 11A-NA0002MU Chromebook  (11.6 inch, Indigo Blue, 1.07 kg",
+      "productImage": "https://rukminim2.flixcart.com/image/416/416/xif0q/computer/u/m/a/-original-imagkqwzxzff6zaa.jpeg",
+      "id": 8
     }
   ]
 }

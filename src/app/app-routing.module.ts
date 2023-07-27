@@ -22,7 +22,7 @@ const routes: Routes = [
     {path:"seller-home",component: SellerHomeComponent},
     {path:"seller-add-product",component:SellerAddProductComponent},
     {path:"seller-product-list",component:SellerProductListComponent},
-    {path:"seller-product-edit",component:SellerProductEditComponent}
+    {path:"seller-product-edit/:id",component:SellerProductEditComponent}
     
 
 ];

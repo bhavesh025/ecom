@@ -8,8 +8,7 @@
         height: 300px;
         block-size: auto;
         aspect-ratio: 2/1;
-        padding: 10px;
-
+        padding: 20px;
     }
 .carousel-caption{
     background-color:#0000006b;
