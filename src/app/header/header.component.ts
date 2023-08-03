@@ -11,12 +11,11 @@ import { SellerService } from '../services/seller.service';
 export class HeaderComponent {
   isLoggedIn$: Observable<boolean> | undefined;
   constructor(private router:Router,private sellService:SellerService){}
-
-
+  
   SignOut()
   {
-    localStorage.removeItem('user');
-    this.router.navigate(['']);    
+    localStorage.removeItem('Seller');
+    this.router.navigate(['seller-auth']);   
   }
 
 }

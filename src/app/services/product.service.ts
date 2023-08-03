@@ -21,6 +21,4 @@ export class ProductService {
   {
       return this.http.put<product>(this.url+data.id,data);
   }
-
-  
 }
