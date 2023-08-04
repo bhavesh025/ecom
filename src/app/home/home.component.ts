@@ -12,7 +12,6 @@ import { ProductService } from '../services/product.service';
 export class HomeComponent {
 
   popularProducts: undefined | product[] 
-  
 
     popProduct: any;
     trndayData:undefined | product[];
@@ -20,12 +19,12 @@ export class HomeComponent {
 
    ngOnInit(){
     this.ApiSer.popularProduct().subscribe((data)=>{      
-      console.warn(data);    
+      //console.warn(data);    
       this.popularProducts = data;
       //this.popProduct = data;
     })
     this.proSer.trndyProduct().subscribe((res)=>{
-        console.warn("Trandy Product",res)
+       // console.warn("Trandy Product",res)
         this.trndayData = res;
     });
    }

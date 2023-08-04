@@ -14,16 +14,16 @@ import { SellerProductEditComponent } from './seller-product-edit/seller-product
 import { authGuard } from './auth.guard';
 
 const routes: Routes = [
-    {path:"",component:HomeComponent},    
+    {path:"",component:HomeComponent, pathMatch:'full'},    
     {path:"About",component:AboutComponent },
     {path:"Login",component:LoginComponent },
     {path:"seller-auth",component:SellerAuthComponent },
     {path:"Contact",component: ContactComponent},
     {path:"seller-login",component: SellerLoginComponent},
     {path:"seller-home",component: SellerHomeComponent, canActivate:[authGuard]},
-    {path:"seller-add-product",component:SellerAddProductComponent},
-    {path:"seller-product-list",component:SellerProductListComponent},
-    {path:"seller-product-edit/:id",component:SellerProductEditComponent}
+    {path:"seller-add-product",component:SellerAddProductComponent, canActivate:[authGuard]},
+    {path:"seller-product-list",component:SellerProductListComponent, canActivate:[authGuard]},
+    {path:"seller-product-edit/:id",component:SellerProductEditComponent, canActivate:[authGuard]},
 ];
 
 @NgModule({

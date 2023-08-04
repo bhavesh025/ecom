@@ -13,9 +13,7 @@ export const authGuard = (userdata:SellerService, router:Router)=>
         return userdata.loggedIn;        
     }
     else{
-        router.navigate(['seller-auth']);
         return false;        
-
     }
 }
 

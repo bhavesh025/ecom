@@ -25,7 +25,7 @@ export class SellerService {
         if(SellUser)
         {
           alert('Login Successful');
-          this.userlogin = SellUser;
+          this.userlogin = SellUser;          
           this.loggedIn.next(true);
           this.router.navigate(['seller-home']);  
           localStorage.setItem('Seller',JSON.stringify(this.userlogin));                  

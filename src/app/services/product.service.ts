@@ -21,4 +21,11 @@ export class ProductService {
   {
       return this.http.put<product>(this.url+data.id,data);
   }
+
+  searchProduct(query:string){
+    return this.http.get<product[]>(`http://localhost:3000/product?q=${query}`);
+}
+
+
+
 }
