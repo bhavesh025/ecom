@@ -11,42 +11,37 @@ import { ProductService } from '../services/product.service';
 })
 export class HeaderComponent {
   isLoggedIn$: Observable<boolean> | undefined;
-  menuType:string = "default";
-  userName:any;
+  menuType: string = "default";
+  userName: any;
 
-  constructor(private router:Router,private sellService:SellerService, prodSer:ProductService){}
+  constructor(private router: Router, private sellService: SellerService, prodSer: ProductService) { }
 
-    ngOnInit(){
-            this.router.events.subscribe((val:any)=>
-            {  
-                //console.warn(val.url)
-                if(val.url){
-                  if(localStorage.getItem('Seller'))
-                  {
-                  //  console.warn("Inside Auth Guard")
-                      this.menuType = "Seller";                      
-                  }
-                  else{
-                    this.menuType = "default";
-                  }
-                }
-            })
+  ngOnInit() {
+    this.router.events.subscribe((val: any) => {
+      //console.warn(val.url)
+      if (val.url) {
+        if (localStorage.getItem('Seller')) {          
+          this.menuType = "Seller";
+        }
+        else {
+                this.menuType = "default";
+              }
+      }
+    })
+  }
+
+  SearchP(query: KeyboardEvent) {
+
+    if (query) {
+      const element = query.target as HTMLInputElement;
+      console.warn(element.value)
     }
 
-    SearchP(query:KeyboardEvent){
+  }
 
-        if(query)
-        {
-            const element = query.target as HTMLInputElement; 
-            console.warn(element.value)                                    
-        }
-
-        }
-
-  SignOut()
-  {
+  SignOut() {
     localStorage.removeItem('Seller');
-    this.router.navigate(['seller-auth']);   
+    this.router.navigate(['seller-auth']);
   }
 
 }
