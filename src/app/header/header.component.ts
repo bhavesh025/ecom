@@ -20,12 +20,12 @@ export class HeaderComponent {
     this.router.events.subscribe((val: any) => {
       //console.warn(val.url)
       if (val.url) {
-        if (localStorage.getItem('Seller')) {          
+        if (localStorage.getItem('Seller')) {
           this.menuType = "Seller";
         }
         else {
-                this.menuType = "default";
-              }
+          this.menuType = "default";
+        }
       }
     })
   }

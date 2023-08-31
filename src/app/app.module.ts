@@ -18,6 +18,7 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
 import { SellerProductListComponent } from './seller-product-list/seller-product-list.component';
 import { SellerProductEditComponent } from './seller-product-edit/seller-product-edit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SellerLoginComponent,
     SellerAddProductComponent,
     SellerProductListComponent,
-    SellerProductEditComponent
+    SellerProductEditComponent,
+    UserAuthComponent
     ],
   imports: [
     BrowserModule,

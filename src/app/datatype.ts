@@ -6,5 +6,10 @@ export interface product{
     productCategory:string,
     productDescription:string,
     productImage:string
+}
 
+export interface signUp{
+    name: string,
+    email:string,
+    password:string
 }

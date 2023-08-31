@@ -12,11 +12,13 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
 import { SellerProductListComponent } from './seller-product-list/seller-product-list.component';
 import { SellerProductEditComponent } from './seller-product-edit/seller-product-edit.component';
 import { authGuard } from './auth.guard';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 
 const routes: Routes = [
     {path:"",component:HomeComponent, pathMatch:'full'},    
     {path:"About",component:AboutComponent },
     {path:"Login",component:LoginComponent },
+    {path:"user-auth",component:UserAuthComponent },
     {path:"seller-auth",component:SellerAuthComponent },
     {path:"Contact",component: ContactComponent},
     {path:"seller-login",component: SellerLoginComponent},
