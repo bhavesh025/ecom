@@ -28,14 +28,20 @@ export class UserService {
         console.warn("From API",data);
         this.http.get<signUp[]>(`http://localhost:3000/users?email=${data.email}&password=${data.password}`)
         .subscribe((res)=>{
-                if(res)
+               
+                const checkLogin = res.find((a:any)=>{
+                    return a.email === data.email && a.password === data.password
+                })
+            if(checkLogin)
                 {
+                    alert("User Success login");
                     localStorage.setItem('user',JSON.stringify(res));
                     this.router.navigate(['/']);
                 }
                 else{
-                        alert("not found") 
+                    alert("Invalid Credential");
                 }
+               
         })
     }
 

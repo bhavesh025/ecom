@@ -30,8 +30,9 @@ export class SellerService {
           this.router.navigate(['seller-home']);  
           localStorage.setItem('Seller',JSON.stringify(this.userlogin));                  
         }
-        else{
-          alert('Login Not Working');
+        else
+        {
+            alert('Login Not Working');
         }
     })     
     

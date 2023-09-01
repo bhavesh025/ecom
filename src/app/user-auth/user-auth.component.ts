@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { login, signUp} from '../datatype';
+import { login, signUp } from '../datatype';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -8,22 +8,19 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./user-auth.component.css']
 })
 export class UserAuthComponent {
+  
   userisLogin = true;
 
-  constructor(private userSer:UserService){}
+  constructor(private userSer: UserService) { }
 
-  ngOnInit():void{
-      this.userSer.userAuthReload()
+  ngOnInit(): void {
+    this.userSer.userAuthReload()
   }
-  uSignUp(data:signUp)
-  {
-      //console.warn(data)
-       this.userSer.signUpUser(data)
+  uSignUp(data: signUp) {
+    this.userSer.signUpUser(data)
   }
-  uLogin(data:login)
-  {
-      //console.warn(data)
-       this.userSer.userLogin(data);
+  uLogin(data: login) {
+    this.userSer.userLogin(data);
   }
 
   goTouserReg() {
