@@ -12,12 +12,13 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
 import { SellerProductListComponent } from './seller-product-list/seller-product-list.component';
 import { SellerProductEditComponent } from './seller-product-edit/seller-product-edit.component';
 import { authGuard } from './auth.guard';
+import { SearchComponent } from './search/search.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 
 const routes: Routes = [
     {path:"",component:HomeComponent, pathMatch:'full'},    
     {path:"About",component:AboutComponent },
-    {path:"Login",component:LoginComponent },
     {path:"user-auth",component:UserAuthComponent },
     {path:"seller-auth",component:SellerAuthComponent },
     {path:"Contact",component: ContactComponent},
@@ -26,6 +27,9 @@ const routes: Routes = [
     {path:"seller-add-product",component:SellerAddProductComponent, canActivate:[authGuard]},
     {path:"seller-product-list",component:SellerProductListComponent, canActivate:[authGuard]},
     {path:"seller-product-edit/:id",component:SellerProductEditComponent, canActivate:[authGuard]},
+    {path:"search/:query", component:SearchComponent},
+    {path:"details/:productId", component:ProductDetailsComponent},
+
 ];
 
 @NgModule({

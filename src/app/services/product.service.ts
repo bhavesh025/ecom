@@ -14,7 +14,7 @@ export class ProductService {
       return this.http.get<product[]>("http://localhost:3000/product?_limit=8");
   }
   getProductId(id:any){
-      return this.http.get(this.url+id);
+      return this.http.get<product>(this.url+id);
   }
 
   UpdateProductData(data:product)
@@ -25,7 +25,5 @@ export class ProductService {
   searchProduct(query:string){
     return this.http.get<product[]>(`http://localhost:3000/product?q=${query}`);
 }
-
-
 
 }

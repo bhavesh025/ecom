@@ -93,7 +93,36 @@
       "id": 8
     }
   ],
-  "users":[
-    
+  "users": [
+    {
+      "name": "bhavesh",
+      "email": "bk@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "raish",
+      "email": "raish@user.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "name": "bhavesh",
+      "email": "bk@gmail.com",
+      "password": "456123",
+      "id": 3
+    },
+    {
+      "name": "jigar",
+      "email": "jigar@gmail.com",
+      "password": "45613",
+      "id": 4
+    },
+    {
+      "name": "maharshi",
+      "email": "m@gmail.com",
+      "password": "123456",
+      "id": 5
+    }
   ]
 }

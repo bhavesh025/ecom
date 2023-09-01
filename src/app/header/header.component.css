@@ -4,5 +4,26 @@
     float: right;    
 }
 .navbar-dark .navbar-nav .nav-link {
-    color: WHITE;
+    color: WHITE;    
+}
+
+.suggested-result{
+        position: absolute;
+        display: list-item;
+        z-index: 10;
+        background-color: #fff;
+        width: 550px;
+        top: 40px;
+        border: 1px solid #ddd;
+    }
+.suggested-result li{
+    border: 1px solid #ddd;
+    list-style-type: none;
+    padding: 5px;;
+}
+
+.suggested-result li a{ 
+    text-decoration:none;
+    cursor: pointer;
+    color: blue;
 }
