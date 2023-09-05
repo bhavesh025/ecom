@@ -30,7 +30,7 @@
                         <div class="d-flex flex-row align-items-center mb-4">
                           <i class="fa fa-lock fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
-                            <input type="password" id="form3Example4c" class="form-control" name="password" ngModel />
+                            <input type="password" id="form3Example4c" minlength="5" class="form-control" name="password" ngModel />
                             <label class="form-label" for="form3Example4c">Password</label>
                           </div>
                         </div>
@@ -54,10 +54,11 @@
                         <p class="text-center h1 mb-5 mx-1 mx-md-4 mt-4" style="color: #5893d4;">User Login</p>  
                         
                           <form #useLogin="ngForm" (ngSubmit)="uLogin(useLogin.value)" class="mx-1 mx-md-4">
-                           <div class="d-flex flex-row align-items-center mb-4">
+                           <p style="color: red;"> {{ authErrro}}</p>
+                            <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fa fa-envelope fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                              <input type="email" id="form3Example3c" class="form-control" name="email" ngModel #email="ngModel" required/>
+                              <input type="email" id="form3Example3c" class="form-control" name="email" ngModel #email="ngModel" required email/>
                               <label class="form-label" for="form3Example3c">Your Email <p *ngIf="email.invalid && email.touched"><span style="color: red;">Enter Valid Email</span></p></label>
                             </div>
                           </div>
@@ -65,13 +66,13 @@
                           <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fa fa-lock fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                                <input type="password" id="form3Example4c" class="form-control" name="password" ngModel #password="ngModel" required/>
+                                <input type="password" id="form3Example4c" minlength="5" maxlength="20" class="form-control" name="password" ngModel #password="ngModel" required/>
                                 <label class="form-label" for="form3Example4c">Password <p *ngIf="password.invalid && password.touched"><span style="color: red;">Enter Valid Password</span></p></label>
                             </div>
                           </div>                     
         
                           <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                            <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                            <button type="submit" [disabled]="useLogin.invalid" class="btn btn-primary btn-lg">Login</button>
                           </div>
                           <div class="form-check d-flex justify-content-center mb-5">                      
                               <label class="form-check-label" for="form2Example3">

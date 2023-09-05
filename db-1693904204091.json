@@ -185,18 +185,6 @@
       "productId": 4,
       "userId": null,
       "id": 5
-    },
-    {
-      "productName": "iPhone 14",
-      "productPrice": "75000",
-      "productColor": "Black",
-      "productCategory": "Mobile",
-      "productDescription": "The iPhone 14  Apple's current flagship iPhones.",
-      "productImage": "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-iPhone-14-Plus-2up-purple-220907-geo_inline.jpg.large.jpg",
-      "quntity": 1,
-      "userId": 1,
-      "productId": 1,
-      "id": 6
     }
   ]
 }

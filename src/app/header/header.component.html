@@ -28,7 +28,7 @@
           <a class="nav-link" routerLink="seller-auth" style="font-size: 16px;">Seller</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="Cart" style="font-size: 16px;">Cart(0)</a>
+          <a class="nav-link" routerLink="Cart" style="font-size: 16px;">Cart({{cartItems}})</a>
         </li>          
       </ul>
   
@@ -40,10 +40,10 @@
           <a class="nav-link" routerLink="" style="font-size: 16px;">Home</a>
         </li>        
         <li class="nav-item">
-          <a class="nav-link" routerLink="seller-auth" style="font-size: 16px;">{{userName | titlecase}}</a>
+          <a class="nav-link" style="font-size: 16px;">{{userName | titlecase}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="Cart" style="font-size: 16px;">Cart(0)</a>
+          <a class="nav-link" routerLink="Cart" style="font-size: 16px;">Cart({{cartItems}})</a>
         </li>          
         <li class="nav-item">
           <a class="nav-link" (click)="Logout()" style="font-size: 16px;cursor: pointer;">Logout</a>
@@ -60,6 +60,7 @@
                   <li class="nav-item">
                     <a class="nav-link" routerLink="seller-add-product" style="font-size: 16px;cursor: pointer;">Add Product</a>
                   </li>
+                  
                   <li class="nav-item">
                     <a class="nav-link" routerLink="seller-product-list" style="font-size: 16px;cursor: pointer;">List</a>
                   </li>
@@ -67,7 +68,7 @@
                     <a class="nav-link" (click)="SignOut()" style="font-size: 16px;cursor: pointer;">Log Out</a>
                   </li>
                    <li class="nav-item">
-                    <a class="nav-link" routerLink="Cart" style="font-size: 16px;cursor: pointer;">Cart(0)</a>
+                    <a class="nav-link" routerLink="Cart" style="font-size: 16px;cursor: pointer;">{{sellerName}} SelerName</a>
                   </li>          
                 </ul>
           </div>

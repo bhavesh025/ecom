@@ -32,15 +32,6 @@
                     <span class="text-danger"><s>{{productData.productPrice | currency:'INR'}}</s></span>
                   </div>
                   
-                  <h6 class="text-success">Free shipping</h6>
-                  
-                  <div class="d-flex flex-row">
-                    <button type="button" class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
-                      Add to Cart
-                    </button>
-                    <button type="button" class="btn btn-danger flex-fill ms-1">Buy now</button>
-                  </div>
-
                   <div class="col-md-6 col-lg-6 col-xl-6 d-flex mt-3">
                     <span style="padding:0 10px;font-size: 20px ;">Quantity </span>
                     <button class="form-button" (click)="handleQty('min')">-</button>
@@ -49,7 +40,23 @@
 
                     <button class="form-button" (click)="handleQty('plus')"> + </button>
                   </div>
+                  <br><br>
+                  
+                  <h6 class="text-success">Free shipping</h6>
+                  
+                  <div class="d-flex flex-row">
+                    <button *ngIf="!removeCart" type="button" (click)="AddToCart()" class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
+                      Add to Cart
+                    </button>
+                    <button *ngIf="removeCart" type="button" (click)="removeToCart(productData.id)" class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
+                      Remove to Cart
+                    </button>
 
+
+                    <button type="button" class="btn btn-danger flex-fill ms-1">Buy now</button>
+                  </div>
+
+                  
                 </div>
                 <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                   

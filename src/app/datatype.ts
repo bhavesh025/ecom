@@ -6,6 +6,20 @@ export interface product{
     productCategory:string,
     productDescription:string,
     productImage:string
+    quntity : undefined | number;
+}
+
+export interface cart{
+    id:number | undefined,
+    productName:string,
+    productPrice :string,
+    productColor:string,
+    productCategory:string,
+    productDescription:string,
+    productImage:string
+    quntity : undefined | number,
+    userId:number,
+    productId:number
 }
 
 export interface signUp{

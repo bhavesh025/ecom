@@ -13,10 +13,10 @@ import { product } from '../datatype';
 export class HeaderComponent {
   isLoggedIn$: Observable<boolean> | undefined;
   menuType: string = "default";
-  sellerName : string='';
-  userName: string='';
+  sellerName : string="";
+  userName: string="";
   searchResult: undefined | product[];
-
+  cartItems=0;
   constructor(private router: Router, private sellService: SellerService, private prodSer: ProductService) { }
 
   ngOnInit() {
@@ -24,13 +24,16 @@ export class HeaderComponent {
       //console.warn(val.url)
       if (val.url) {
         if (localStorage.getItem('Seller')) {
-               this.menuType = "Seller";
+              let sellerStore = localStorage.getItem('Seller');
+              let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+              this.sellerName = sellerData; // some problem
+              this.menuType = "Seller";
         }
         else if(localStorage.getItem('user'))
         {
             let userStore = localStorage.getItem('user');
-            let userData = userStore && JSON.parse(userStore);
-            this.userName = userData.name;
+            let userData = userStore && JSON.parse(userStore)[0];
+            this.userName = userData.name;          
             this.menuType = "user";
         }
         else {
@@ -38,6 +41,15 @@ export class HeaderComponent {
         }
       }
     })
+
+      let cartData = localStorage.getItem('localCart');
+      if(cartData)
+      {
+          this.cartItems = JSON.parse(cartData).length;
+      }
+      this.prodSer.cartData.subscribe((items)=>{
+          this.cartItems = items.length;
+      })
   }
 
   SearchP(query: KeyboardEvent) {
