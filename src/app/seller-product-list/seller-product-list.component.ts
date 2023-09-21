@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SellerService } from '../services/seller.service';
 import { product } from '../datatype';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-seller-product-list',
@@ -9,16 +10,26 @@ import { product } from '../datatype';
 })
 export class SellerProductListComponent {
 
-  constructor(private sellSer:SellerService){}
+  constructor(private sellSer:SellerService, private product:ProductService){}
     productdata:any;
       ngOnInit() {
-                this.sellSer.ListProductApi().subscribe(response => {
-                   this.productdata = response
-              });
+                    this.list();
           }
-          delProduct()
+          delProduct(id:number)          
           {
-              alert('Delete Press ');
+           // console.warn("warn id",id);
+            this.product.deleteProduct(id).subscribe((res)=>{
+                if(res)
+                {
+                    this.list();
+                }
+            }) 
+          }
+
+          list(){
+            this.sellSer.ListProductApi().subscribe(response => {
+              this.productdata = response
+            });
           }
 
 }

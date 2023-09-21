@@ -21,6 +21,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './search/search.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Required for animations
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +49,9 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule    
+    NgbModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()    
   ],
   providers: [],
   bootstrap: [AppComponent]

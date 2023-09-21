@@ -17,6 +17,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { UserAuthComponent } from './user-auth/user-auth.component';
 
 const routes: Routes = [
+  
     {path:"",component:HomeComponent, pathMatch:'full'},    
     {path:"About",component:AboutComponent },
     {path:"user-auth",component:UserAuthComponent },
@@ -29,7 +30,6 @@ const routes: Routes = [
     {path:"seller-product-edit/:id",component:SellerProductEditComponent, canActivate:[authGuard]},
     {path:"search/:query", component:SearchComponent},
     {path:"details/:productId", component:ProductDetailsComponent},
-
 ];
 
 @NgModule({

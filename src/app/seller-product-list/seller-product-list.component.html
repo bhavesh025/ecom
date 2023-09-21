@@ -1,6 +1,5 @@
 <div class="container">
     <div class="row">
-        
 
 <div class="alert alert-primary text-center" role="alert">
     <strong style="font-size: larger;">Product Details</strong>
@@ -30,7 +29,8 @@
                 <td>{{data.productCategory}}</td>  
                 <td>{{data.productDescription}}</td>  
                 <td [width]="200">
-                    <button class="btn btn-danger" (click)="delProduct()">Delete</button>
+                    <button class="btn btn-danger" (click)="delProduct(data.id)">Delete</button>
+
                     <a routerLink="/seller-product-edit/{{data.id}}">
                         <button class="btn btn-warning" style="margin-left: 10px;">Edit</button>
                     </a>

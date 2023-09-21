@@ -7,7 +7,7 @@ import { cart, product } from '../datatype';
 })
 export class ProductService {
 
-  cartData = new EventEmitter<product [] | []>();
+  cartData = new EventEmitter<product[] | []>();
 
   url = "http://localhost:3000/product/";
   constructor(private http: HttpClient) { }
@@ -19,6 +19,11 @@ export class ProductService {
     return this.http.get<product>(this.url + id);
   }
 
+  deleteProduct(id:number)
+  {
+      return this.http.delete(`http://localhost:3000/product/${id}`);
+  }
+
   UpdateProductData(data: product) {
     return this.http.put<product>(this.url + data.id, data);
   }
@@ -27,40 +32,38 @@ export class ProductService {
     return this.http.get<product[]>(`http://localhost:3000/product?q=${query}`);
   }
 
-localAddToCart(data:product) {
-  // Retrieve the existing cart data from localStorage
-  let localCart = localStorage.getItem('localCart');
-  let cartData = [];
+  localAddToCart(data: product) {
+    // Retrieve the existing cart data from localStorage
+    let localCart = localStorage.getItem('localCart');
+    let cartData = [];
 
-  if (localCart) {
-    // If there's existing cart data, parse it
-    cartData = JSON.parse(localCart);
+    if (localCart) {
+      // If there's existing cart data, parse it
+      cartData = JSON.parse(localCart);
+    }
+
+    // Add the new product data to the cartData array
+    cartData.push(data);
+
+    // Store the updated cartData back in localStorage
+    localStorage.setItem('localCart', JSON.stringify(cartData));
+
+    this.cartData.emit(cartData);
   }
 
-  // Add the new product data to the cartData array
-  cartData.push(data);
-
-  // Store the updated cartData back in localStorage
-  localStorage.setItem('localCart', JSON.stringify(cartData));
-
-  this.cartData.emit(cartData);
-}
-
-removeitemfromCart(productId:number){
+  removeitemfromCart(productId: number) {
     let cartData = localStorage.getItem('localCart');
-    if(cartData)
-    {
-      let items:product[] = JSON.parse(cartData);
-      items = items.filter((item:product)=>productId!==item.id);
-      console.warn(items)
-      localStorage.setItem('localCart',JSON.stringify(items));
+    if (cartData) {
+      let items: product[] = JSON.parse(cartData);
+      items = items.filter((item: product) => productId !== item.id);
+      //console.warn("remove Item From Cart", items)
+      localStorage.setItem('localCart', JSON.stringify(items));
       this.cartData.emit(items);
     }
-}
+  }
 
-addToCart(cartData:cart)
-{
-    return this.http.post('http://localhost:3000/cart',cartData);
-}
+  addToCart(cartData: cart) {
+    return this.http.post('http://localhost:3000/cart', cartData);
+  }
 
 }

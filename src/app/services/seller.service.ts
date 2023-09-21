@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { product } from '../datatype';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class SellerService {
 
   loggedIn = new BehaviorSubject<boolean>(false);
   
-   constructor(private http:HttpClient, private router:Router) { }
+   constructor(private http:HttpClient, private router:Router, private toastr: ToastrService) { }
    userlogin:any;
   signUpUser(data:any){
       return  this.http.post("http://localhost:3000/user",data);
@@ -24,15 +25,17 @@ export class SellerService {
         });
         if(SellUser)
         {
-          alert('Login Successful');
+          //alert('Login Successful');
+          this.toastr.success("Success","Login Successful");  
           this.userlogin = SellUser;          
           this.loggedIn.next(true);
-          this.router.navigate(['seller-home']);  
+          this.router.navigate(['seller-product-list']);  
           localStorage.setItem('Seller',JSON.stringify(this.userlogin));                  
         }
         else
         {
-            alert('Login Not Working');
+            this.toastr.error("Invalid Credential","Please provide valid credential");  
+            //alert('Login Not Working 123'); TOASTER ADDED            
         }
     })     
     
