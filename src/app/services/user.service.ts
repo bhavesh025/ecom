@@ -2,6 +2,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { login, signUp } from '../datatype';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Injectable({
@@ -10,7 +11,7 @@ import { login, signUp } from '../datatype';
 export class UserService {
 
     invaliduserAuth = new EventEmitter<boolean>(false)
-    constructor(private http: HttpClient, private router: Router) { }
+    constructor(private http: HttpClient, private router: Router, private toastr:ToastrService) { }
 
     signUpUser(user: signUp) {
         //console.warn("User API",data)
@@ -32,12 +33,14 @@ export class UserService {
                 })
                 if (checkLogin && res?.length) {
                     this.invaliduserAuth.emit(false)
-                    alert("User Success login");
+                    //alert("User Success login");
+                    this.toastr.success("Success","Login Successful"); 
                     localStorage.setItem('user', JSON.stringify(res));
                     this.router.navigate(['/']);
                 }
                 else {
-                    alert("Invalid Credential");
+                    //alert("Invalid Credential");
+                    this.toastr.success("Failed","Invalid Credential"); 
                     this.invaliduserAuth.emit(true)
                 }
 

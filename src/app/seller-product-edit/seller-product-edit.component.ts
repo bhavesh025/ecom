@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { product } from '../datatype';
 
@@ -10,7 +10,7 @@ import { product } from '../datatype';
 })
 export class SellerProductEditComponent {
 
-  constructor(private aroute:ActivatedRoute, private proSer:ProductService){}
+  constructor(private aroute:ActivatedRoute, private proSer:ProductService, private route:Router){}
   productData: undefined | any
     ngOnInit(){
       let newId = this.aroute.snapshot.paramMap.get('id');
@@ -27,6 +27,8 @@ export class SellerProductEditComponent {
           }          
           this.proSer.UpdateProductData(data).subscribe((result)=>{
               alert('Update Product Successfully')
+              this.route.navigate(['seller-product-list'])
+              
           })
     }
 

@@ -25,9 +25,11 @@ export class HeaderComponent {
       if (val.url) {
         if (localStorage.getItem('Seller')) {
               let sellerStore = localStorage.getItem('Seller');
-              let sellerData = sellerStore && JSON.parse(sellerStore)[0];
-              this.sellerName = sellerData; // some problem
+              //let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+              let sellerData = sellerStore && JSON.parse(sellerStore);
+              this.sellerName = sellerData.name; // some problem
               this.menuType = "Seller";
+              //console.warn("Get Name",sellerData.name)
         }
         else if(localStorage.getItem('user'))
         {

@@ -55,7 +55,7 @@
           <div class="d-flex justify-content-between" *ngSwitchCase="'Seller'" style="margin-left: 800px;float: right;">
               <ul class="navbar-nav me-auto">
                   <li class="nav-item">
-                    <a class="nav-link" routerLink="home" style="font-size: 16px;cursor: pointer;">Seller Home</a>
+                    <a class="nav-link" routerLink="home" style="font-size: 16px;cursor: pointer;display: none; ">Seller Home</a>
                   </li>           
                   <li class="nav-item">
                     <a class="nav-link" routerLink="seller-add-product" style="font-size: 16px;cursor: pointer;">Add Product</a>
@@ -65,11 +65,14 @@
                     <a class="nav-link" routerLink="seller-product-list" style="font-size: 16px;cursor: pointer;">List</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" (click)="SignOut()" style="font-size: 16px;cursor: pointer;">Log Out</a>
+                    <a class="nav-link" (click)="SignOut()" style="font-size: 16px;cursor: pointer;">LogOut</a>
                   </li>
-                   <li class="nav-item">
-                    <a class="nav-link" routerLink="Cart" style="font-size: 16px;cursor: pointer;">{{sellerName}} SelerName</a>
-                  </li>          
+                   <!--<li class="nav-item">
+                    <a class="nav-link" routerLink="Cart" style="font-size: 16px;cursor: pointer;"><button class="btn btn-success">{{sellerName}} </button></a>
+                  </li>-->          
+                  <li>
+                    <button class="btn btn-danger">{{sellerName}} </button>
+                  </li>
                 </ul>
           </div>
 

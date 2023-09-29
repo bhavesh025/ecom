@@ -14,9 +14,9 @@ export class SellerService {
   
    constructor(private http:HttpClient, private router:Router, private toastr: ToastrService) { }
    userlogin:any;
-  signUpUser(data:any){
-      return  this.http.post("http://localhost:3000/user",data);
-  }
+    signUpUser(data:any){
+        return  this.http.post("http://localhost:3000/user",data);
+    }
 
   signInUser(data:any){
       this.http.get<any>("http://localhost:3000/user").subscribe((res)=>{

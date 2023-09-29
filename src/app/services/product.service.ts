@@ -21,7 +21,7 @@ export class ProductService {
 
   deleteProduct(id:number)
   {
-      return this.http.delete(`http://localhost:3000/product/${id}`);
+      return this.http.delete<product>(this.url+id);
   }
 
   UpdateProductData(data: product) {
