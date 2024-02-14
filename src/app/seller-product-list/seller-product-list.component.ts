@@ -16,24 +16,32 @@ export class SellerProductListComponent {
   ngOnInit() {
     this.list();
   }
-  /*delProduct(id: number) {
-    // console.warn("warn id",id);
-    debugger;
-    this.product.deleteProduct(id).subscribe((res) => {
-      debugger;
-      console.warn("r",res);
-      if (res) {
-        debugger;
-        alert('Delete Data');
+  delProduct(id: number) {
+    //console.warn(id);
+    debugger
+    this.http.delete(`http://localhost:5000/product/`+id).subscribe((res: any) => {
+      debugger
+      console.warn("Result", res);
+
+      if (res.length>0) {
+        debugger
         this.list();
+        alert("Data Delete");
+      } else {
+        debugger
+        alert("Data Not Delete");
       }
     })
-  }*/
-  delProduct(productId: number): void {
-    const url = `http://localhost:3000/product/${productId}`;
-  
-    this.http.delete(url).subscribe(
+  }
+
+ /*
+  delProduct(productId: number){
+    debugger;
+    //const url = `http://localhost:3000/product/${productId}`;
+    //const url = `http://localhost:5000/product/${productId}`;
+    this.http.delete(`http://localhost:5000/product/`+productId).subscribe(
       (response: any) => {
+        debugger;
         console.log("Product deleted successfully. Response:", response);
       },
       (error: any) => {
@@ -44,7 +52,7 @@ export class SellerProductListComponent {
         }
       }
     );
-  }
+  } */
 
   list() {
     this.sellSer.ListProductApi().subscribe(response => {

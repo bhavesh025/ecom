@@ -5,15 +5,14 @@ import { SellerService } from './services/seller.service';
     return true;
 };*/
 
-export const authGuard = (userdata:SellerService, router:Router)=>
-{
+export const authGuard = (userdata: SellerService, router: Router) => {
     let userLog = localStorage.getItem('Seller');
-
-    if(userLog){
-        return userdata.loggedIn;        
+    if (userLog) {
+        return userdata.loggedIn;
     }
-    else{
-        return false;        
+    else 
+    {
+        return false;
     }
 }
 

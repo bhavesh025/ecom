@@ -15,11 +15,13 @@ export class SellerService {
    constructor(private http:HttpClient, private router:Router, private toastr: ToastrService) { }
    userlogin:any;
     signUpUser(data:any){
-        return  this.http.post("http://localhost:3000/user",data);
+        //return  this.http.post("http://localhost:3000/user",data);
+        return  this.http.post("http://localhost:5000/user",data);
     }
 
   signInUser(data:any){
-      this.http.get<any>("http://localhost:3000/user").subscribe((res)=>{
+      //this.http.get<any>("http://localhost:3000/user").subscribe((res)=>{
+      this.http.get<any>("http://localhost:5000/user").subscribe((res)=>{
         const SellUser = res.find((a:any)=>{
             return a.email === data.email && a.password === data.password 
         });
@@ -50,14 +52,16 @@ export class SellerService {
     }
 
   AddProductApi(data:product){
-        return this.http.post("http://localhost:3000/product",data);
+        return this.http.post("http://localhost:5000/product",data);
   }
   ListProductApi(){
-      return this.http.get("http://localhost:3000/product");
+      //return this.http.get("http://localhost:3000/product");
+      return this.http.get("http://localhost:5000/product");
   }
 
   popularProduct(){
-    return this.http.get<product[]>("http://localhost:3000/product?_limit=3");
+    //return this.http.get<product[]>("http://localhost:3000/product?_limit=3");
+    return this.http.get<product[]>("http://localhost:5000/productlimit");
   }
 
 }

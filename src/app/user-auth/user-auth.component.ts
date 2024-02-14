@@ -10,7 +10,6 @@ import { ProductService } from '../services/product.service';
 })
 export class UserAuthComponent {
 
-
   userisLogin = true;
   authErrro: string = '';
   constructor(private userSer: UserService, private product: ProductService) { }
@@ -22,9 +21,13 @@ export class UserAuthComponent {
     this.userSer.signUpUser(data)
   }
   uLogin(data: login) {
+
     this.userSer.userLogin(data);
+
     this.userSer.invaliduserAuth.subscribe((result) => {
+
       if (result) {
+
         this.authErrro = "Please enter valid details..";
       }
       else {
@@ -42,14 +45,18 @@ export class UserAuthComponent {
 
   localCartToRemoveCart() {
     let data = localStorage.getItem('localCart');
+
     if (data) {
+
       let cartDataList: product[] = JSON.parse(data)
       let user = localStorage.getItem('user');
       let userId = user && JSON.parse(user)[0].id;
+
       console.warn("Hello", userId);
 
 
       cartDataList.forEach((product: product, index) => {
+
         let cartData: cart = {
           ...product,
           productId: product.id,
@@ -57,12 +64,15 @@ export class UserAuthComponent {
         };
         delete cartData.id;
         setTimeout(() => {
+
           this.product.addToCart(cartData).subscribe((result) => {
+
             if (result) {
               console.warn("Item store Db");
             }
           })
           if (cartDataList.length === index + 1) {
+
             localStorage.removeItem('localCart');
           }
         }, 500);

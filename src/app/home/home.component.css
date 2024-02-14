@@ -2,6 +2,7 @@
     object-fit: contain;
     height: 600px;
     width: 100%;
+    background-color: rgb(223, 234, 249);
     }
     .img-product{
         max-inline-size: 100%;
@@ -11,7 +12,7 @@
         padding: 20px;
     }
 .carousel-caption{
-    background-color:#0000006b;
+   background-color:#0000006b;
     border-radius: 5px;
     }
 /*

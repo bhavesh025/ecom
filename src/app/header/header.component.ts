@@ -34,7 +34,7 @@ export class HeaderComponent {
         else if(localStorage.getItem('user'))
         {
             let userStore = localStorage.getItem('user');
-            let userData = userStore && JSON.parse(userStore)[0];
+            let userData = userStore && JSON.parse(userStore);
             this.userName = userData.name;          
             this.menuType = "user";
         }

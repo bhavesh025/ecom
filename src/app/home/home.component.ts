@@ -18,13 +18,11 @@ export class HomeComponent {
     constructor(private ApiSer:SellerService, private proSer:ProductService){   }
 
    ngOnInit(){
-    this.ApiSer.popularProduct().subscribe((data)=>{      
-      //console.warn(data);    
-      this.popularProducts = data;
-      //this.popProduct = data;
+        this.ApiSer.popularProduct().subscribe((data)=>{            
+        this.popularProducts = data;
+      
     })
-    this.proSer.trndyProduct().subscribe((res)=>{
-       // console.warn("Trandy Product",res)
+    this.proSer.trndyProduct().subscribe((res)=>{      
         this.trndayData = res;
     });
    }

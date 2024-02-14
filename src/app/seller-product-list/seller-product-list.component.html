@@ -20,8 +20,8 @@
         </thead>    
 
         <tbody>
-            <tr *ngFor="let data of productdata">
-                <td>{{data.id}}</td>  
+            <tr *ngFor="let data of productdata;let i=index">
+                <td> {{i+1}}</td>  
                 <td><img class="img-thumbnail pImage" src="{{data.productImage}}" /></td>   
                 <td>{{data.productName}}</td>  
                 <td>{{data.productPrice}}</td>  

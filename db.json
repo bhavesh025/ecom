@@ -17,6 +17,12 @@
       "email": "Mp@gmail.com",
       "password": "567890",
       "id": 3
+    },
+    {
+      "name": "Test User",
+      "email": "abcd@gmail.com",
+      "password": "654321",
+      "id": 4
     }
   ],
   "product": [
@@ -59,7 +65,7 @@
     {
       "productName": "Realme C55 (Sunshower, 128 GB)  (8 GB RAM)",
       "productPrice": "14000",
-      "productColor": "Glue",
+      "productColor": "Blue",
       "productCategory": "Mobile",
       "productDescription": "Handset, Adapter, USB Cable, Important Info Booklet with Warranty Card, Quick Guide, Sim Card Tool, Screen Protect Film, Case",
       "productImage": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/i/q/-original-imagp55ffvqaj9ws.jpeg",
@@ -75,8 +81,8 @@
       "id": 6
     },
     {
-      "productName": "Laptop Backpack Medium 30 L Laptop ",
-      "productPrice": "500",
+      "productName": "Laptop Backpack Medium 30 L Laptop",
+      "productPrice": "5005",
       "productColor": "Blue",
       "productCategory": "Bag",
       "productDescription": "Medium 30 L Laptop Backpack Medium 30 L Laptop Backpack Waterproof Laptop Backpack/School Bag/College Bag  (Blue)",
@@ -107,12 +113,6 @@
       "id": 2
     },
     {
-      "name": "bhavesh",
-      "email": "bk@gmail.com",
-      "password": "456123",
-      "id": 3
-    },
-    {
       "name": "jigar",
       "email": "jigar@gmail.com",
       "password": "45613",
@@ -123,92 +123,26 @@
       "email": "m@gmail.com",
       "password": "123456",
       "id": 5
+    },
+    {
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "password": "142536",
+      "id": 6
     }
   ],
   "cart": [
     {
-      "productName": "HP Chromebook MediaTek Kompanio 500",
-      "productPrice": "22500",
-      "productColor": "Grey",
-      "productCategory": "Laptop",
-      "productDescription": "4 GB/64 GB EMMC Storage/Chrome OS) 11A-NA0002MU Chromebook  (11.6 inch, Indigo Blue, 1.07 kg",
-      "productImage": "https://rukminim2.flixcart.com/image/416/416/xif0q/computer/u/m/a/-original-imagkqwzxzff6zaa.jpeg",
-      "quntity": 1,
-      "userId": 1,
-      "productId": 8,
+      "productName": "Samsung Galaxy A34 5G",
+      "productPrice": "30000",
+      "productColor": "Black",
+      "productCategory": "Mobile",
+      "productDescription": "Nightography, Gorilla Glass 5, IP67, Voice Focus. Samsung Knox security. Full HD Display",
+      "productImage": "https://fdn.gsmarena.com/imgroot/reviews/23/samsung-galaxy-a34/lifestyle/-1200w5/gsmarena_017.jpg",
+      "quntity": 3,
+      "productId": 2,
+      "userId": null,
       "id": 1
-    },
-    {
-      "productName": "Samsung Galaxy A34 5G",
-      "productPrice": "30000",
-      "productColor": "Black",
-      "productCategory": "Mobile",
-      "productDescription": "Nightography, Gorilla Glass 5, IP67, Voice Focus. Samsung Knox security. Full HD Display",
-      "productImage": "https://fdn.gsmarena.com/imgroot/reviews/23/samsung-galaxy-a34/lifestyle/-1200w5/gsmarena_017.jpg",
-      "quntity": 1,
-      "productId": 2,
-      "userId": null,
-      "id": 2
-    },
-    {
-      "productName": "Delta-20 Slateblue Sports - Indian Shoes",
-      "productPrice": "800",
-      "productColor": "Navy",
-      "productCategory": "Shoes",
-      "productDescription": "Delta-20 Slateblue Sports,Casual,Walking,Gym, Walking Shoes For Men  (Blue)",
-      "productImage": "https://rukminim2.flixcart.com/image/416/416/xif0q/shoe/z/m/9/-original-imagpb4zy25a9hsg.jpeg",
-      "quntity": 1,
-      "productId": 6,
-      "userId": null,
-      "id": 3
-    },
-    {
-      "productName": "Samsung Galaxy A34 5G",
-      "productPrice": "30000",
-      "productColor": "Black",
-      "productCategory": "Mobile",
-      "productDescription": "Nightography, Gorilla Glass 5, IP67, Voice Focus. Samsung Knox security. Full HD Display",
-      "productImage": "https://fdn.gsmarena.com/imgroot/reviews/23/samsung-galaxy-a34/lifestyle/-1200w5/gsmarena_017.jpg",
-      "quntity": 1,
-      "productId": 2,
-      "userId": null,
-      "id": 4
-    },
-    {
-      "productName": "ASUS Vivobook 15",
-      "productPrice": "45000",
-      "productColor": "Black",
-      "productCategory": "Watch",
-      "productDescription": "ASUS Vivobook 15 Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ522WS.",
-      "productImage": "https://rukminim2.flixcart.com/image/832/832/xif0q/watch/h/g/u/-original-imagqhveckhjygya.jpeg?q=70",
-      "quntity": 1,
-      "productId": 4,
-      "userId": null,
-      "id": 5
-    },
-    {
-      "productName": "iPhone 14",
-      "productPrice": "75000",
-      "productColor": "Black",
-      "productCategory": "Mobile",
-      "productDescription": "The iPhone 14  Apple's current flagship iPhones.",
-      "productImage": "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-iPhone-14-Plus-2up-purple-220907-geo_inline.jpg.large.jpg",
-      "quntity": 1,
-      "userId": 1,
-      "productId": 1,
-      "id": 6
-    },
-    {
-      "productName": "iPhone 14",
-      "productPrice": "75000",
-      "productColor": "Black",
-      "productCategory": "Mobile",
-      "productDescription": "The iPhone 14  Apple's current flagship iPhones.",
-      "productImage": "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-iPhone-14-Plus-2up-purple-220907-geo_inline.jpg.large.jpg",
-      "quntity": 1,
-      "userId": 1,
-      "productId": 1,
-      "id": 7
     }
   ]
 }

@@ -9,14 +9,14 @@ export class ProductService {
 
   cartData = new EventEmitter<product[] | []>();
 
-  url = "http://localhost:3000/product/";
+  url = "http://localhost:5000/product/";
   constructor(private http: HttpClient) { }
 
   trndyProduct() {
-    return this.http.get<product[]>("http://localhost:3000/product?_limit=8");
+    return this.http.get<product[]>("http://localhost:5000/producttrendy");
   }
   getProductId(id: any) {
-    return this.http.get<product>(this.url + id);
+    return this.http.get<product>(`http://localhost:5000/product/`+id);
   }
 
   deleteProduct(id:number)
@@ -24,12 +24,13 @@ export class ProductService {
       return this.http.delete<product>(this.url+id);
   }
 
-  UpdateProductData(data: product) {
-    return this.http.put<product>(this.url + data.id, data);
+  UpdateProductData(data: product) {    
+    return this.http.put<product>(`http://localhost:5000/product/`+data.id, data);
   }
 
   searchProduct(query: string) {
-    return this.http.get<product[]>(`http://localhost:3000/product?q=${query}`);
+    //return this.http.get<product[]>(`http://localhost:3000/product?q=${query}`);
+    return this.http.get<product[]>(`http://localhost:5000/product-search/`+query);
   }
 
   localAddToCart(data: product) {
@@ -52,18 +53,21 @@ export class ProductService {
   }
 
   removeitemfromCart(productId: number) {
+    
     let cartData = localStorage.getItem('localCart');
-    if (cartData) {
+    if (cartData) {    
       let items: product[] = JSON.parse(cartData);
       items = items.filter((item: product) => productId !== item.id);
       //console.warn("remove Item From Cart", items)
       localStorage.setItem('localCart', JSON.stringify(items));
       this.cartData.emit(items);
-    }
+    }    
   }
 
   addToCart(cartData: cart) {
+    
     return this.http.post('http://localhost:3000/cart', cartData);
+    //return this.http.post('http://localhost:5000/cart', cartData);
   }
 
 }

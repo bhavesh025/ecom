@@ -28,7 +28,7 @@ public sellerLogin!:NgForm;
             }   });      
         }
     signIn(item:any){
-      this.sellSer.signInUser(item)
+      this.sellSer.signInUser(item);
     }
 
     gotoReg(){
